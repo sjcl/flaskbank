@@ -19,10 +19,10 @@ def main():
 
     if production:
         print('Using Production Configuration')
-        create_app(ProductionConfig).run(threaded=True)
+        create_app(ProductionConfig).run(threaded=True, host='0.0.0.0', port=80)
     else:
         print('Using Development Configuration')
-        create_app().run(threaded=True)
+        create_app().run(threaded=True, host='0.0.0.0', port=80)
 
 
 if __name__ == '__main__':
